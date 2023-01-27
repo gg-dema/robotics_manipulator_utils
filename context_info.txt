@@ -1,3 +1,4 @@
 simulator: get_mutable_context ---> holding the most recent step in the trajector
  LeafContext (for leaf Systems) and DiagramContext (for composite System Diagrams).
 Make station: still return a diagram
+
