@@ -3,6 +3,9 @@ INDEX
 Multibody Dynamics
 
     Authoring a multibody simulation
+    
+    KWESY PERSONAL INTRO
+
     Mathematical programming with MultibodyPlant
     PyPlot animation
     Rendering MultibodyPlant
