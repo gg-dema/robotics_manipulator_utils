@@ -5,7 +5,7 @@
         
         
         <link name="l1">
-            <pose>0.25 0 0 0 1.6 0</pose>
+            <pose>0 0 0 0 0 0</pose>
             <collision name="l1_collision">
                 <geometry>
                     <cylinder>
@@ -15,6 +15,7 @@
                 </geometry>
             </collision>
             <visual name="l1_visual">
+                <pose>0.25 0 0 0 1.6 0</pose>
                 <geometry>
                     <cylinder>
                         <radius>0.05</radius>
@@ -26,7 +27,7 @@
         
         
         <link name="l2">
-            <pose>0.5 0.25 0 -1.6 0 0</pose>
+            <pose>0.5 0 0 0 0 0</pose>
             <collision name="l2_collision">
                 <geometry>
                     <cylinder>
@@ -36,6 +37,7 @@
                 </geometry>
             </collision>
             <visual name="l2_visual">
+                <pose>0 0.25 0 -1.6 0 0</pose>
                 <geometry>
                     <cylinder>
                         <radius>0.03</radius>
@@ -45,35 +47,10 @@
             </visual>
         </link>
         
-        <link name="joint_case1">
-        	<pose>0 0 0 0 0 0</pose>
-        	<visual name="visual_case1">
-        		<geometry>
-	        		<cylinder>
-                        <radius>0.05</radius>
-                        <length>0.14</length>
-    		        </cylinder>
-    		     </geometry>
-        	</visual>
-        </link>
-        
-        
-         <link name="joint_case2">
-        	<pose>0.5 0 0 0 0 0</pose>
-        	<visual name="visual_case2">    		     
-        		<geometry>
-	        		<cylinder>
-                        <radius>0.05</radius>
-                        <length>0.14</length>
-    		        </cylinder>
-    		     </geometry>
-        	</visual>
-        </link>
-        
         <joint name='q1' type='revolute'>
             <parent>world</parent>
             <child>l1</child>
-            <pose relative_to='l1'>0 0 -0.25  0 -1.6 0  </pose>
+            <pose>0 0 0  0 0 0  </pose>
             <axis>
                 <xyz>0 0 1</xyz>
                 <limit>
@@ -87,15 +64,16 @@
         <joint name='q2' type='revolute'>
             <parent>l1</parent>
             <child>l2</child>
-            <pose relative_to='l2'>0 0 -0.25 -1.6 0 0</pose>
+            <pose relative_to='l2'>0 0 0 0 0 0</pose>
             <axis>
                 <xyz>0 0 1</xyz>
                 <limit>
-                    <lower>0.0</lower>
-                    <upper>3.14</upper>
+                    <lower>3.14</lower>
+                    <upper>6.28</upper>
                 </limit>
             </axis>
         </joint>
+        
 
     </model>
 </sdf>
