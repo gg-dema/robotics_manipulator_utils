@@ -5,4 +5,4 @@
 /share
 /.*
 pyvenv.cfg
-/*/.ipynb_checkpoints/
+/drake_kit/*/.ipynb_checkpoints/
