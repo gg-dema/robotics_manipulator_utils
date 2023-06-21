@@ -1,0 +1,13 @@
+<<<<<<< HEAD
+# created by virtualenv automatically
+/bin
+/etc
+/lib
+/share
+/.*
+pyvenv.cfg
+/drake_kit/*/.ipynb_checkpoints/
+=======
+./.ipynb_checkpoints
+./venv
+>>>>>>> f9b5a2a (init, gitignore)

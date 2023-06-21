@@ -1,0 +1,29 @@
+
+
+
+OBJECT 
+
+	model_directives = string with a lot of parameters	
+	------> not xml file, but contains link to xml file inside drake pkg
+	#INIT
+	¯¯¯¯¯
+	builder ---> pydrake.systems.framework.DiagramBuilder()
+	station ---> pydrake.systems.framework.DiagramBuilder().AddSystem()
+	plant -----> pydrake.systems.framework.DiagramBuilder().AddSystem().GetSubsystemByName()
+	controller_plant --> same of before, GetSubsystemBtName().get_multibody_plant_for_control()
+	
+	#MESCHAT:
+	¯¯¯¯¯
+	visualizer
+		use: Set2dREnderMode()
+			 DeleteAdededControls()
+
+
+-----------------------------------------------
+
+XML file in sdf format: 	
+	collision and visual: both has a geometry parameters: 
+		for avoid useless computation, the collision use simpler shapes, like geometric primitive
+		
+	When i get a body from the plant: plant comes from parser, the name that i
+	use is the same that i have defined in the sdf file
